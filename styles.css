@@ -1,3 +1,8 @@
+:root{
+    --ColorPrincipal: #081b29;
+    --ColorSecundario: #3ba0ff
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -31,7 +36,7 @@ body{
     font-weight: 600;
 }
 
-.navbar{
+.navbar a{
     display: inline-block;
     font-size: 25px;
     color: #fff;
@@ -41,7 +46,7 @@ body{
     transition: .3s;
 }
 .navbar a:hover{
-    color: #3ba0ff;
+    color: var(--ColorSecundario);
 }
 
 .home{
@@ -49,7 +54,7 @@ body{
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    background-color: #0e3557;
+    background-color: var(--ColorPrincipal);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -70,5 +75,42 @@ body{
 }
 .home-content p{
     font-size: 20px;
-    
+
+}
+
+.home-social a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid var(--ColorSecundario);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--ColorSecundario);
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+}
+.home-social a:hover{
+    background: var(--ColorSecundario);
+    color: #081b29;
+    box-shadow: 0 0 20px var(--ColorSecundario);
+}
+
+.btn-box{
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--ColorSecundario);
+    border-radius: 40px;
+    font-size: 16px;
+    color: var(--ColorPrincipal);
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.btn-box:hover{
+    box-shadow: 0 0 5px var(--ColorSecundario),
+    0 0 25px var(--ColorSecundario), 0 0 50px var(--ColorSecundario),
+    0 0 100px var(--ColorSecundario), 0 0 200px var(--ColorSecundario);
 }
