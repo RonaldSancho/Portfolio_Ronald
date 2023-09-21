@@ -1,6 +1,7 @@
 :root{
     --ColorPrincipal: #081b29;
-    --ColorSecundario: #3ba0ff
+    --ColorSecundario: #3ba0ff;
+    --ColorBlanco: #fff;
 }
 
 * {
@@ -11,7 +12,8 @@
 }
 
 body{
-    color: #ededed;
+    color: var(--ColorBlanco);
+    background: var(--ColorPrincipal);
 }
 
 .header{
@@ -31,7 +33,7 @@ body{
 .logo{
     position: relative;
     font-size: 25px;
-    color: #fff;
+    color: var(--ColorBlanco);
     text-decoration: none;
     font-weight: 600;
     cursor: default;
@@ -42,13 +44,14 @@ body{
 .navbar a{
     display: inline-block;
     font-size: 25px;
-    color: #fff;
+    color: var(--ColorBlanco);
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
     transition: .3s;
     opacity: 0;
     animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 
 }
 .navbar a:hover{
@@ -79,6 +82,8 @@ body{
 }
 .home-content h3:nth-of-type(2){
     margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
 }
 .home-content h3 span{
     color: var(--ColorSecundario);
@@ -114,7 +119,7 @@ body{
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     transition: .5s ease;
-    animation-delay: calc(.2s * var);
+    animation-delay: calc(.2s * var(--i));
 }
 .home-social a:hover{
     background: var(--ColorSecundario);
@@ -132,12 +137,55 @@ body{
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px var(--ColorSecundario),
+    0 0 25px var(--ColorSecundario);
 }
 .btn-box:hover{
     box-shadow: 0 0 5px var(--ColorSecundario),
     0 0 25px var(--ColorSecundario), 0 0 50px var(--ColorSecundario),
     0 0 100px var(--ColorSecundario), 0 0 200px var(--ColorSecundario);
 }
+
+.about-me{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.about-img img{
+    padding-bottom: 20%;
+    max-width: 630px;
+    height: auto;
+    width: 65%;
+    border-radius: 8px;
+
+}
+
+.about-text h2{
+    font-size: 60px;
+}
+.about-text h2 span{
+    color: var(--ColorSecundario);
+}
+.about-text h4{
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--ColorBlanco);
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+.about-text p{
+    color: var(--ColorBlanco);
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+
 
 @keyframes slideRight{
     0%{
