@@ -73,6 +73,9 @@ body{
 .home-content h3{
     font-size: 32px;
     font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
 }
 .home-content h3:nth-of-type(2){
     margin-bottom: 30px;
@@ -84,10 +87,15 @@ body{
     font-size: 56px;
     font-weight: 700;
     margin: -6px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
 }
 .home-content p{
     font-size: 20px;
-
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .7s;
 }
 
 .home-social a{
@@ -103,6 +111,10 @@ body{
     color: var(--ColorSecundario);
     text-decoration: none;
     margin: 30px 15px 30px 0;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    transition: .5s ease;
+    animation-delay: calc(.2s * var);
 }
 .home-social a:hover{
     background: var(--ColorSecundario);
@@ -148,6 +160,32 @@ body{
     }
     100%{
         transform: translateY(0px);
+        opacity: 1;
+        
+    }
+}
+
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+        
+    }
+}
+
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+
+    }
+    100%{
+        transform: translateX(0px);
         opacity: 1;
         
     }
