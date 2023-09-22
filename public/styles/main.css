@@ -158,6 +158,8 @@ body{
 }
 
 .about-img img{
+    padding-top: 10%;
+    padding-left: 10%;
     padding-bottom: 20%;
     max-width: 630px;
     height: auto;
