@@ -343,59 +343,60 @@ body{
 
 .portfolio{
     background-color: var(--ColorPrincipal);
-    color: #fff;
-    padding: 50px 20px;
-}
-.portfolio .content-portfolio{
     max-width: 1100px;
     margin: auto;
-}
-.portfolio h2{
-    font-size: 48px;
-    font-family: 'Righteous';
-    text-align: center;
-    padding: 20px 0;
+    padding: 50px 20px;
 }
 .portfolio .gallery{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-gap:30px;
 }
 .portfolio .gallery .project{
     position: relative;
-    max-width: 340px;
-    height: fit-content;
-    margin: 10px;
-    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid var(--ColorBlanco) ;
+    border-radius: 10px;
 }
 .portfolio .gallery .project img{
     width: 100%;
+    height: 100%;
     display: block;
 }
 .portfolio .gallery .project .overlay{
     position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    top: -100%;
+    left: 0;
+    bottom: 0;
     text-align: center;
-    background: linear-gradient(rgba(46, 32, 153, 0.8), rgba(12, 174, 203, 0.8));
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: 1s;
-    font-size: 18px;
-    letter-spacing: 3px;
+    background: linear-gradient(rgba(8, 27, 41, 0.9), rgb(25, 102, 173));
+    width: 100%;
+    padding: 20px;
     opacity: 0;
+    transition: .3s;
 }
 .portfolio .gallery .project .overlay h3{
+    color: var(--ColorBlanco);
     margin-bottom: 20px;
-    transition: 1s;
+    padding-top: 10%;
 }
-.portfolio .gallery .project .overlay:hover{
+.portfolio .gallery .project .overlay span{
+    color: var(--ColorBlanco);
+    display: inline-block;
+    font-size: 25px;
+    margin: 0 3px;
+    padding:  0 5px;
+}
+.portfolio .gallery .project .overlay a{
+    display: block;
+    margin: 20px;
+    text-decoration: none;
+    color: var(--ColorBlanco);
+    font-weight: bold;
+}
+.portfolio .gallery .project:hover .overlay{
     opacity: 1;
-}
-.portfolio .gallery .project .overlay:hover h3{
-    margin-bottom: 0px;
+    top: 0;
 }
 
 /* .main-text{
