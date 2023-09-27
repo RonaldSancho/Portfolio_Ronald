@@ -6,6 +6,7 @@ var typed = new Typed(".Rol", {
     loop:true
 })
 
+
 function skills(){
     var skills = document.getElementById("skills");
     var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;

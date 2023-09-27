@@ -155,6 +155,8 @@ body{
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 1.5rem;
+    padding: 50px;
+    padding-top: 5%;
 }
 
 .about-img img{
@@ -203,7 +205,7 @@ body{
 .skills{
     background-color: var(--ColorPrincipal);
     color: #fff;
-    padding: 70px 10px;
+    padding: 20px 10px;
 }
 .skills .container-section{
     max-width: 1100px;
@@ -397,6 +399,25 @@ body{
 .portfolio .gallery .project:hover .overlay{
     opacity: 1;
     top: 0;
+}
+
+
+footer {
+    background-color: var(--ColorAzulOscuro);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Estilos para los enlaces en el footer */
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilos para el hover de los enlaces */
+footer a:hover {
+    text-decoration: underline;
 }
 
 /* .main-text{
