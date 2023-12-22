@@ -1,5 +1,5 @@
 var typed = new Typed(".Rol", {
-    strings:["Full Stack Developer", "Systems Engineering Student"],
+    strings:["Full Stack Developer", "Systems Engineering"],
     typeSpeed:100,
     backSpeed:100,
     backDelay:1000,
