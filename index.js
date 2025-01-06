@@ -1,5 +1,9 @@
 var typed = new Typed(".Rol", {
-    strings:["Full Stack Developer", "recent graduate from Fidelitas University"],
+    strings: [
+        "Backend Developer",
+        "Full Stack Developer",
+        "Computer Systems Engineer"
+    ],
     typeSpeed:100,
     backSpeed:100,
     backDelay:1000,
@@ -7,23 +11,32 @@ var typed = new Typed(".Rol", {
 })
 
 
-function skills(){
+function skills() {
     var skills = document.getElementById("skills");
     var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
-    if(distancia_skills >= 300){
+    if (distancia_skills >= 300) {
         let skill = document.getElementsByClassName("progress");
-        skill[0].classList.add("HTML");
-        skill[1].classList.add("CSS");
-        skill[2].classList.add("JS");
-        skill[3].classList.add("NODEJS");
-        skill[4].classList.add("NETCORE");
-        skill[5].classList.add("communication");
-        skill[6].classList.add("responsibility");
-        skill[7].classList.add("teamwork");
-        skill[8].classList.add("adaptability");
-        skill[9].classList.add("problems");
+        
+        // Technical Skills
+        skill[0].classList.add("Java");
+        skill[1].classList.add("SpringBoot");
+        skill[2].classList.add("NETCore");
+        skill[3].classList.add("PostgreSQL");
+        skill[4].classList.add("MongoDB");
+        skill[5].classList.add("RESTfulAPIs");
+        skill[6].classList.add("JUnit");
+
+        // Professional Skills
+        skill[7].classList.add("communication");
+        skill[8].classList.add("responsibility");
+        skill[9].classList.add("teamwork");
+        skill[10].classList.add("adaptability");
+        skill[11].classList.add("problemSolving");
+        skill[12].classList.add("criticalThinking");
+        skill[13].classList.add("timeManagement");
     }
 }
+
 
 window.onscroll = function(){
     skills();
